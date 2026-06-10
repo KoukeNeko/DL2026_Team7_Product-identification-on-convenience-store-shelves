@@ -72,13 +72,24 @@ cd src/web-react && npm install && npm run build   # 產物在 dist/,由後端 s
 - 貨架結構(列基準線):box mAP@50 ≈ 0.80(v2)
 
 ## 八、授權與聲明 (License & Notes)
-- 程式碼:MIT(見 `LICENSE`)。
-- 資料:**不適用本授權**,版權屬原始來源 / 拍攝者,僅供學術研究。
+**程式碼:GNU AGPL-3.0**(見 `LICENSE`)。本系統使用 Ultralytics YOLO(AGPL-3.0),依其 copyleft 規定,整個衍生作品一併以 AGPL-3.0 釋出。
+
+**第三方元件與資料授權:**
+
+| 元件 / 資料 | 授權 | 備註 |
+|---|---|---|
+| Ultralytics YOLO(偵測 / seg) | AGPL-3.0 | 含本 repo 程式與 `*.pt` 衍生權重 |
+| Chinese-CLIP（`OFA-Sys/chinese-clip-vit-base-patch16`） | Apache-2.0 | 由 HuggingFace 自動下載 |
+| SKU-110K 資料集 | 學術 / 非商業(需向作者申請) | 由其微調的偵測權重僅供研究 |
+| 品牌參考圖 / 貨架實拍 | 版權屬原始來源 / 拍攝者 | 不隨 repo 散布,僅供學術研究 |
+
+> **模型權重**(`yolov8l_sku110k_finetuned.pt`、`l2_probe.npz`、`gallery_cnclip_clean.npz`、`shelf_struct_v2.pt`)衍生自上述資料集與有版權的參考圖,**僅供學術研究、不可商用、不宜自由轉散**;雲端連結建議設為授權存取(僅分享給助教 / 老師)。
+
 - AI 使用揭露:_(如課程要求,請於此據實補充)_
 
-## 九、團隊 (Team)
-| 姓名 | 學號 | GitHub |
-|---|---|---|
-| 陳德生 | (待補) | [@KoukeNeko](https://github.com/KoukeNeko) |
-| 鄭雅瀞 | (待補) | [@jane400715](https://github.com/jane400715) |
-| 蕭政雲 | (待補) | [@FNKnohe](https://github.com/FNKnohe) |
+## 九、團隊 (Team) — 第 7 組
+| 角色 | 姓名 | 學號 | GitHub |
+|---|---|---|---|
+| 組長 | 陳德生 | 614410091 | [@KoukeNeko](https://github.com/KoukeNeko) |
+| 組員 | 蕭政雲 | 613410079 | [@FNKnohe](https://github.com/FNKnohe) |
+| 組員 | 鄭雅瀞 | 614410139 | [@jane400715](https://github.com/jane400715) |
