@@ -101,7 +101,7 @@ uvicorn server:app --host 0.0.0.0 --port 8000
 
 > **模型權重**(`yolov8l_sku110k_finetuned.pt`、`l2_probe.npz`、`gallery_cnclip_clean.npz`、`shelf_struct_v2.pt`)衍生自上述資料集與有版權的參考圖,**僅供學術研究、不可商用、不宜自由轉散**;雲端連結建議設為授權存取(僅分享給助教 / 老師)。
 
-- AI 使用揭露:_(如課程要求,請於此據實補充)_
+- AI 使用揭露:本專題使用 Claude Opus 4.8(Anthropic)代替人工粗篩(候選資料 / 裁切的初步過濾);方法、標註與最終結果由團隊確認。
 
 ## 九、團隊 (Team) — 第 7 組
 | 角色 | 姓名 | 學號 | GitHub |
