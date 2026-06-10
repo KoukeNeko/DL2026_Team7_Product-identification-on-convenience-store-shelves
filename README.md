@@ -54,17 +54,31 @@ README.md   LICENSE   requirements.txt   .gitignore
 
 ## 六、使用方法 (Usage)
 ```bash
-# 1. 環境
+# 1. 安裝相依套件
 pip install -r requirements.txt
-# 2. 放置模型權重到 models/(連結見上節)
-# 3. 啟動後端
-cd src/web && uvicorn server:app --host 0.0.0.0 --port 8000
-# 4. 前端
-cd src/web-react && npm install && npm run build   # 產物在 dist/,由後端 static 提供
-# 5. 瀏覽器開 http://localhost:8000 上傳貨架照片
+# 2. 放置模型權重到 src/models/(連結見第五節);Chinese-CLIP 會由 HuggingFace 自動下載
+# 3. 建置前端 → 產物複製到 src/static/(FastAPI 由此提供頁面)
+cd src/web-react && npm install && npm run build && cp -r dist/* ../static/ && cd ..
+# 4. 啟動後端(server.py 在 src/,服務 src/static/)
+uvicorn server:app --host 0.0.0.0 --port 8000
+# 5. 瀏覽器開 http://localhost:8000,上傳貨架照片
 ```
-> (可選) 設定環境變數 `GEMINI_KEY` 可啟用低信心排面的「受限候選重排」(僅從 CLIP 探針 top-5 內挑選,不可自由生成);未設定則自動略過,系統以純 DL 流程(YOLO + Chinese-CLIP + seg)運作。
-> 權重與資料路徑可用環境變數 `MODELS_DIR`、`DATA_DIR` 覆寫(預設讀 `src/models/`)。
+### 環境變數
+
+| 變數 | 必要性 | 說明 |
+|---|---|---|
+| `MODELS_DIR` | 選填 | 權重資料夾(預設 `src/models/`) |
+| `DATA_DIR` | 選填 | 參考圖 / 資料路徑 |
+| `GEMINI_KEY` | **選填** | 啟用 Gemini VLM 輔助(見下) |
+
+**`GEMINI_KEY` —— 可選的 VLM 輔助(預設關閉)**
+
+對 CLIP 探針標為 `unknown` 的排面,讓 VLM 從**探針自己的 top-5 候選**中挑一個(或回報 `none`)。它**不能自由生成品牌**,只能在候選內選,因此能救回「看得出但探針沒把握」的品牌而不會幻覺。模型用 `gemini-2.5-flash-lite`。
+
+- **取得金鑰**:Google AI Studio <https://aistudio.google.com/apikey>(免費額度即可)。
+- **啟用**:`export GEMINI_KEY=你的金鑰`,再啟動後端。
+- **未設定時自動略過** → 系統以純 DL 流程(YOLO + Chinese-CLIP + seg)運作,結果完全可重現。
+- ⚠️ 金鑰**請勿**寫進程式或 commit 進 repo(`.gitignore` 已擋 `.env` 與 `start_web.sh`)。
 
 ## 七、結果 (Results)
 - 商品偵測:held-out box **mAP@50 ≈ 0.91**
