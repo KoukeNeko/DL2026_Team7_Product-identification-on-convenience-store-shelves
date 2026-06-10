@@ -47,9 +47,10 @@ README.md   LICENSE   requirements.txt   .gitignore
 
 ## 五、模型 (Models)
 權重檔較大,存放於雲端(永久連結):
-- 偵測 YOLOv8l(SKU-110K 微調):(雲端連結待補)
-- L2 品牌探針 `l2_probe.npz`:(雲端連結待補)
-- 結構 YOLOv8-seg `shelf_struct_v2.pt`:(雲端連結待補)
+- 偵測 YOLOv8l(SKU-110K 微調):[Google Drive](https://drive.google.com/file/d/1aoUbYst-gHT2T33Vy5U6IjMJA1SsWXWQ/view?usp=sharing)
+- L2 品牌探針 `l2_probe.npz`:[Google Drive](https://drive.google.com/file/d/1pQdm6H8Fba5mmUOjw4VRA5F2QBW82WXN/view?usp=sharing)
+- L1 類別中心 `gallery_cnclip_clean.npz`:[Google Drive](https://drive.google.com/file/d/1tyDe8Hx1EGaxybNZFQBLvNh_rxyUqUSb/view?usp=sharing)
+- 結構 YOLOv8-seg `shelf_struct_v2.pt`:[Google Drive](https://drive.google.com/file/d/1tVT0f231DWQe1De-tghhb8nX_hcbf5G_/view?usp=sharing)
 - Chinese-CLIP:由 HuggingFace 自動下載(`OFA-Sys/chinese-clip-vit-base-patch16`)
 
 ## 六、使用方法 (Usage)
@@ -94,6 +95,7 @@ uvicorn server:app --host 0.0.0.0 --port 8000
 |---|---|---|
 | Ultralytics YOLO(偵測 / seg) | AGPL-3.0 | 含本 repo 程式與 `*.pt` 衍生權重 |
 | Chinese-CLIP（`OFA-Sys/chinese-clip-vit-base-patch16`） | Apache-2.0 | 由 HuggingFace 自動下載 |
+| Noto Sans CJK TC 字型（`NotoSansTC.otf`） | SIL OFL 1.1 | 隨 repo 提供,見 `src/models/OFL.txt` |
 | SKU-110K 資料集 | 學術 / 非商業(需向作者申請) | 由其微調的偵測權重僅供研究 |
 | 品牌參考圖 / 貨架實拍 | 版權屬原始來源 / 拍攝者 | 不隨 repo 散布,僅供學術研究 |
 

@@ -23,9 +23,10 @@ ref_*/
 *.tgz
 *.zip
 
-# ===== 字型:NotoSansTC 為 OFL(可轉散),但檔案大;預設本機放 src/models/ =====
+# ===== 字型:NotoSansTC 以 OFL 隨 repo 釋出(見 src/models/OFL.txt);其餘字型不進 repo =====
 *.otf
 *.ttf
+!src/models/NotoSansTC.otf
 
 # ===== Python =====
 __pycache__/

@@ -4,11 +4,11 @@
 
 | 檔名 | 用途 | 下載 |
 |---|---|---|
-| `yolov8l_sku110k_finetuned.pt` | 商品偵測 (SKU-110K 微調) | (雲端連結待補) |
-| `l2_probe.npz` | L2 品牌線性探針 | (雲端連結待補) |
-| `gallery_cnclip_clean.npz` | L1 類別中心 (Chinese-CLIP 特徵庫) | (雲端連結待補) |
-| `shelf_struct_v2.pt` | 貨架結構 YOLOv8-seg (列基準線 + 門) | (雲端連結待補) |
-| `NotoSansTC.otf` | 標籤字型 (僅獨立視覺化用) | 任一 Noto Sans TC 字型 |
+| `yolov8l_sku110k_finetuned.pt` | 商品偵測 (SKU-110K 微調) | [Google Drive](https://drive.google.com/file/d/1aoUbYst-gHT2T33Vy5U6IjMJA1SsWXWQ/view?usp=sharing) |
+| `l2_probe.npz` | L2 品牌線性探針 | [Google Drive](https://drive.google.com/file/d/1pQdm6H8Fba5mmUOjw4VRA5F2QBW82WXN/view?usp=sharing) |
+| `gallery_cnclip_clean.npz` | L1 類別中心 (Chinese-CLIP 特徵庫) | [Google Drive](https://drive.google.com/file/d/1tyDe8Hx1EGaxybNZFQBLvNh_rxyUqUSb/view?usp=sharing) |
+| `shelf_struct_v2.pt` | 貨架結構 YOLOv8-seg (列基準線 + 門) | [Google Drive](https://drive.google.com/file/d/1tVT0f231DWQe1De-tghhb8nX_hcbf5G_/view?usp=sharing) |
+| `NotoSansTC.otf` | 標籤字型 (僅獨立視覺化用) | 已隨 repo 提供（OFL，見 `OFL.txt`) |
 
 Chinese-CLIP 主幹由 HuggingFace 自動下載 (`OFA-Sys/chinese-clip-vit-base-patch16`,Apache-2.0)。
 
