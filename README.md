@@ -40,7 +40,7 @@ README.md   LICENSE   requirements.txt   .gitignore
 | 用途 | 資料 | 是否公開 | 連結 / 取得方式 |
 |---|---|---|---|
 | 偵測微調 | SKU-110K | 公開 | https://github.com/eg4000/SKU110K_CVPR19 |
-| 偵測 backbone 權重 | 第三方 YOLOv8l-SKU110k | 公開 | (來源連結待補) |
+| 偵測 backbone 權重 | 第三方 YOLOv8l-SKU110k（`sbfisher/yolov8l-sku110k` → `best_imgsz640.pt`） | 公開 | [HuggingFace](https://huggingface.co/sbfisher/yolov8l-sku110k) |
 | 品牌特徵 | Chinese-CLIP | 公開 | https://github.com/OFA-Sys/Chinese-CLIP |
 | 品牌庫參考圖 | 自公開電商/官方型錄蒐集 | **不公開(版權)** | 取得方式:聯絡 @KoukeNeko / 團隊雲端 (連結待補) |
 | 貨架實拍 | 組員自行拍攝 | **不公開** | 聯絡 @KoukeNeko / 團隊雲端 (連結待補) |
