@@ -1,0 +1,13 @@
+# Tested on Python 3.12, CUDA 12.4
+torch>=2.6
+torchvision
+ultralytics>=8.3
+transformers>=4.46
+opencv-python>=4.9
+numpy>=1.26
+pillow>=10
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+# Optional: legacy M-LSD door detector (lazy-imported, superseded by the self-trained seg model)
+# controlnet_aux>=0.0.7

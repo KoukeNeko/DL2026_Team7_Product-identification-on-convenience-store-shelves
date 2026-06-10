@@ -1,0 +1,60 @@
+# ===== 資料:絕不上傳(版權 + 課程規定:非公開資料集不上傳) =====
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+data/
+data_clean/
+datasets/
+資料集*/
+cropset*/
+uploads/
+ref_*/
+# 若 README 需要少數示意圖,用  git add -f path/to/figure.png  強制加入
+
+# ===== 模型權重:太大,改放雲端並在 README 附連結 =====
+*.pt
+*.pth
+*.onnx
+*.h5
+*.hdf5
+*.npz
+*.tgz
+*.zip
+
+# ===== Python =====
+__pycache__/
+*.pyc
+.venv/
+venv/
+pylibs/
+.ipynb_checkpoints/
+
+# ===== Node / 前端 =====
+node_modules/
+# 注意:前端 build 產物 dist/ 是否上傳由你決定(後端靠它提供頁面);若上傳請 git add -f
+
+# ===== OS / 編輯器 =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== 機密:金鑰絕不進 repo =====
+.env
+.env.*
+*.env
+start_web.sh
+*secret*
+*credential*
+
+# ===== 開發工具痕跡:不要進 repo =====
+.claude/
+.omx/
+AGENTS.md
+_STATE.md
+PROPOSED_PLAN.md
+notes/
+口試防禦包_QA.md
+*.bak_*
