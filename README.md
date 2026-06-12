@@ -2,6 +2,8 @@
 Convenience-Store Shelf Product Recognition & Planogram Compliance
 
 > 深度學習概論 期末專題 — 第 7 組 `DL2026_Team7_Product-identification-on-convenience-store-shelves`
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/2fd12b16-75e2-400c-9309-efe1023ce8f3" />
+
 
 ## 一、創作目標 (Goals)
 針對台灣便利商店的密集貨架,建立一條端到端流程:
